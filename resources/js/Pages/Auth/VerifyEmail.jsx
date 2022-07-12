@@ -13,7 +13,7 @@ export default function VerifyEmail({ status }) {
     };
 
     return (
-        <Guest>
+        <>
             <Head title="Email Verification" />
 
             <div className="mb-4 text-sm text-gray-600">
@@ -41,6 +41,8 @@ export default function VerifyEmail({ status }) {
                     </Link>
                 </div>
             </form>
-        </Guest>
+        </>
     );
 }
+
+VerifyEmail.layout = page => <Guest children={page}/>

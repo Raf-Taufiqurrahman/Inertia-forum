@@ -31,7 +31,7 @@ export default function Register() {
     };
 
     return (
-        <Guest>
+        <>
             <Head title="Register" />
 
             <ValidationErrors errors={errors} />
@@ -103,6 +103,8 @@ export default function Register() {
                     </Button>
                 </div>
             </form>
-        </Guest>
+        </>
     );
 }
+
+Register.layout = page => <Guest children={page}/>

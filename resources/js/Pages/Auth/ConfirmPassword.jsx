@@ -28,7 +28,7 @@ export default function ConfirmPassword() {
     };
 
     return (
-        <Guest>
+        <>
             <Head title="Confirm Password" />
 
             <div className="mb-4 text-sm text-gray-600">
@@ -57,6 +57,8 @@ export default function ConfirmPassword() {
                     </Button>
                 </div>
             </form>
-        </Guest>
+        </>
     );
 }
+
+ConfirmPassword.layout = page => <Guest children={page}/>

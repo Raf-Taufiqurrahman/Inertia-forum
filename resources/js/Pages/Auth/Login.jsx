@@ -31,7 +31,7 @@ export default function Login({ status, canResetPassword }) {
     };
 
     return (
-        <Guest>
+        <>
             <Head title="Log in" />
 
             {status && <div className="mb-4 font-medium text-sm text-green-600">{status}</div>}
@@ -89,6 +89,8 @@ export default function Login({ status, canResetPassword }) {
                     </Button>
                 </div>
             </form>
-        </Guest>
+        </>
     );
 }
+
+Login.layout = page => <Guest children={page}/>
